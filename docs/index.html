@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="Jekyll • Simple, blog-aware, static sites" />
 <meta property="og:image" content="https://jekyllrb.com/img/jekyll-og.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-08T22:35:01-07:00" />
+<meta property="article:published_time" content="2021-08-18T03:03:58-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jekyllrb.com/img/jekyll-og.png" />
 <meta property="twitter:title" content="Quickstart" />
 <meta name="twitter:site" content="@jekyllrb" />
 <meta name="google-site-verification" content="onQcXpAvtHBrUI5LlroHNE_FP0b2qvFyPq7VZw36iEY" />
 <script type="application/ld+json">
-{"description":"Jekyll is a static site generator. It takes text written in your favorite markup language and uses layouts to create a static website. You can tweak the site’s look and feel, URLs, the data displayed on the page, and more.","url":"https://jekyllrb.com/docs/","@type":"BlogPosting","headline":"Quickstart","dateModified":"2021-04-08T22:35:01-07:00","datePublished":"2021-04-08T22:35:01-07:00","image":"https://jekyllrb.com/img/jekyll-og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://jekyllrb.com/docs/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jekyllrb.com/img/logo-2x.png"}},"@context":"https://schema.org"}</script>
+{"datePublished":"2021-08-18T03:03:58-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jekyllrb.com/docs/"},"description":"Jekyll is a static site generator. It takes text written in your favorite markup language and uses layouts to create a static website. You can tweak the site’s look and feel, URLs, the data displayed on the page, and more.","url":"https://jekyllrb.com/docs/","@type":"BlogPosting","image":"https://jekyllrb.com/img/jekyll-og.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jekyllrb.com/img/logo-2x.png"}},"headline":"Quickstart","dateModified":"2021-08-18T03:03:58-07:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!--[if lt IE 9]>
@@ -137,7 +137,7 @@ tweak the site’s look and feel, URLs, the data displayed on the page, and more
 <p>Jekyll requires the following:</p>
 
 <ul>
-  <li>Ruby version <strong>2.4.0</strong> or higher</li>
+  <li>Ruby version <strong>2.5.0</strong> or higher</li>
   <li>RubyGems</li>
   <li>GCC and Make</li>
 </ul>
@@ -166,6 +166,8 @@ tweak the site’s look and feel, URLs, the data displayed on the page, and more
   </li>
   <li>Browse to <a href="http://localhost:4000" target="_blank">http://localhost:4000</a></li>
 </ol>
+
+<p class="note warning">If you are using Ruby version 3.0.0 or higher, step 5 <a href="https://github.com/github/pages-gem/issues/752">may fail</a>. You may fix it by adding <code class="language-plaintext highlighter-rouge">webrick</code> to your dependencies: <code class="language-plaintext highlighter-rouge">bundle add webrick</code></p>
 
 <p class="note info">Pass the <code class="language-plaintext highlighter-rouge">--livereload</code> option to <code class="language-plaintext highlighter-rouge">serve</code> to automatically refresh the page with each change you make to the source files: <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --livereload</code></p>
 

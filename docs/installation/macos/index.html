@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="Jekyll • Simple, blog-aware, static sites" />
 <meta property="og:image" content="https://jekyllrb.com/img/jekyll-og.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-08T22:35:01-07:00" />
+<meta property="article:published_time" content="2021-08-18T03:03:58-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jekyllrb.com/img/jekyll-og.png" />
 <meta property="twitter:title" content="Jekyll on macOS" />
 <meta name="twitter:site" content="@jekyllrb" />
 <meta name="google-site-verification" content="onQcXpAvtHBrUI5LlroHNE_FP0b2qvFyPq7VZw36iEY" />
 <script type="application/ld+json">
-{"description":"Install Command Line Tools To install the command line tools to compile native extensions, open a terminal and run:","url":"https://jekyllrb.com/docs/installation/macos/","@type":"BlogPosting","headline":"Jekyll on macOS","dateModified":"2021-04-08T22:35:01-07:00","datePublished":"2021-04-08T22:35:01-07:00","image":"https://jekyllrb.com/img/jekyll-og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://jekyllrb.com/docs/installation/macos/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jekyllrb.com/img/logo-2x.png"}},"@context":"https://schema.org"}</script>
+{"datePublished":"2021-08-18T03:03:58-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jekyllrb.com/docs/installation/macos/"},"description":"Install Command Line Tools To install the command line tools to compile native extensions, open a terminal and run:","url":"https://jekyllrb.com/docs/installation/macos/","@type":"BlogPosting","image":"https://jekyllrb.com/img/jekyll-og.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jekyllrb.com/img/logo-2x.png"}},"headline":"Jekyll on macOS","dateModified":"2021-08-18T03:03:58-07:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!--[if lt IE 9]>
@@ -134,12 +134,18 @@
 <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select <span class="nt">--install</span>
 </code></pre></div></div>
 
+<h3 id="set-sdkroot-only-macos-catalina-or-later">set SDKROOT (only macOS Catalina or later)</h3>
+<p>Starting on macOS Catalina (10.15) the headers used for Ruby have been moved from their previous location which results in some gems, including Jekyll to fail installation. This can be solved by setting SDKROOT in your shell configuration to the value provided by xcrun.</p>
+
+<div class="language-ssh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> SDKROOT=<span class="err">$</span>(xcrun --show-sdk-path)
+</code></pre></div></div>
+
 <h2 id="install-ruby">Install Ruby</h2>
 
-<p>Jekyll requires <strong>Ruby v2.4.0</strong> or higher.
+<p>Jekyll requires <strong>Ruby v2.5.0</strong> or higher.
 macOS Big Sur 11.x ships with Ruby 2.6.3. Check your Ruby version using <code class="language-plaintext highlighter-rouge">ruby -v</code>.</p>
 
-<p>If you’re running a previous version of macOS, you’ll have to install a newer version of Ruby.</p>
+<p>If you’re running a previous version of macOS, you’ll have to install a newer version of Ruby. Installation with <a href="https://brew.sh">Homebrew</a> is simple if you’re only planning to use Ruby for Jekyll. Install with a version manager such as <a href="https://asdf-vm.com/">asdf</a>, <a href="https://github.com/postmodern/chruby">chruby</a>, <a href="https://github.com/rbenv/rbenv">rbenv</a>, or <a href="https://rvm.io/">rvm</a> if you need to switch among Ruby versions (instructions for rbenv are below). See the guide <a href="https://mac.install.guide/ruby/index.html">Install Ruby on Mac</a> for details and recommendations.</p>
 
 <h3 id="brew">With Homebrew</h3>
 <p>To run the latest Ruby version you need to install it through <a href="https://brew.sh">Homebrew</a>.</p>
@@ -189,7 +195,7 @@ brew <span class="nb">install </span>rbenv
 rbenv init
 
 <span class="c"># Check your installation</span>
-curl <span class="nt">-fsSL</span> https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+curl <span class="nt">-fsSL</span> https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 </code></pre></div></div>
 
 <p>Restart your terminal to apply your changes.

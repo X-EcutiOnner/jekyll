@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="Jekyll • Simple, blog-aware, static sites" />
 <meta property="og:image" content="https://jekyllrb.com/img/jekyll-og.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-08T22:35:01-07:00" />
+<meta property="article:published_time" content="2021-08-18T03:03:58-07:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jekyllrb.com/img/jekyll-og.png" />
 <meta property="twitter:title" content="Configuration Options" />
 <meta name="twitter:site" content="@jekyllrb" />
 <meta name="google-site-verification" content="onQcXpAvtHBrUI5LlroHNE_FP0b2qvFyPq7VZw36iEY" />
 <script type="application/ld+json">
-{"description":"The tables below list the available settings for Jekyll, and the various options (specified in the configuration file) and flags (specified on the command-line) that control them.","url":"https://jekyllrb.com/docs/configuration/options/","@type":"BlogPosting","headline":"Configuration Options","dateModified":"2021-04-08T22:35:01-07:00","datePublished":"2021-04-08T22:35:01-07:00","image":"https://jekyllrb.com/img/jekyll-og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://jekyllrb.com/docs/configuration/options/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jekyllrb.com/img/logo-2x.png"}},"@context":"https://schema.org"}</script>
+{"datePublished":"2021-08-18T03:03:58-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://jekyllrb.com/docs/configuration/options/"},"description":"The tables below list the available settings for Jekyll, and the various options (specified in the configuration file) and flags (specified on the command-line) that control them.","url":"https://jekyllrb.com/docs/configuration/options/","@type":"BlogPosting","image":"https://jekyllrb.com/img/jekyll-og.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jekyllrb.com/img/logo-2x.png"}},"headline":"Configuration Options","dateModified":"2021-08-18T03:03:58-07:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!--[if lt IE 9]>
@@ -523,14 +523,42 @@
       <tr class="setting">
         <td>
           <p class="name">
+            <strong>Log Level</strong>
+            
+          </p> 
+          <p class="description">Specify a log level among debug, info, warn, or error.</p>
+        </td> 
+        <td class="align-center">
+          
+          <p><code class="flag">JEKYLL_LOG_LEVEL=info</code></p>
+        </td>
+      </tr>
+    
+      <tr class="setting">
+        <td>
+          <p class="name">
             <strong>Incremental build</strong>
             
           </p> 
-          <p class="description">Enable the experimental incremental build feature. Incremental build only re-builds posts and pages that have changed, resulting in significant performance improvements for large sites, but may also break site generation in certain cases.</p>
+          <p class="description">Enable the experimental <a href="/docs/configuration/incremental-regeneration/">incremental build</a> feature. Incremental build only re-builds posts and pages that have changed, resulting in significant performance improvements for large sites, but may also break site generation in certain cases.</p>
         </td> 
         <td class="align-center">
           <p><code class="option">incremental: BOOL</code></p>
           <p><code class="flag">-I, --incremental</code></p>
+        </td>
+      </tr>
+    
+      <tr class="setting">
+        <td>
+          <p class="name">
+            <strong>Disable Bundle Require</strong>
+            
+          </p> 
+          <p class="description">Disables the need to require gems in `:jekyll_plugins` Gemfile</p>
+        </td> 
+        <td class="align-center">
+          
+          <p><code class="flag">JEKYLL_NO_BUNDLER_REQUIRE=true</code></p>
         </td>
       </tr>
     
@@ -616,7 +644,7 @@ before your site is served.</p>
             <strong>Local Server Port</strong>
             
           </p> 
-          <p class="description">Listen on the given port.</p>
+          <p class="description">Listen on the given port. The default is `4000`.</p>
         </td> 
         <td class="align-center">
           
@@ -634,7 +662,7 @@ before your site is served.</p>
             <strong>Local Server Hostname</strong>
             
           </p> 
-          <p class="description">Listen at the given hostname.</p>
+          <p class="description">Listen at the given hostname. The default is `localhost`.</p>
         </td> 
         <td class="align-center">
           
